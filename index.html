@@ -46,17 +46,17 @@
 		embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
 		// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
 		// Returns a valid button ID.
-			if(prechatFormData[4].value === "A product question or recommendation"){
+			if(prechatFormData[4].value === "Finding a Product"){
 				console.log("Routing to Inside Sales...");	
 				//console.log(prechatFormData[4].value);	
 				return "573n000000000hr";
 			}
-			else if(prechatFormData[4].value === "My existing order or account information"){
+			else if(prechatFormData[4].value === "My Existing Order or Account"){
 				console.log("Routing to Inside Sales...");
 				//console.log(prechatFormData[4].value);
 				return "573n000000000hr";
 			}
-			else if(prechatFormData[4].value === "Printer or software support"){
+			else if(prechatFormData[4].value === "Printer or Software Support"){
 				console.log("Routing to Tech Support...");
 				//console.log(prechatFormData[4].value);
 				return "573n000000000hw";
