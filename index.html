@@ -34,7 +34,7 @@
 		  "transcriptFields":[ "Visitor_Company__c" ],
 		  "displayToAgent": true
 		}];
-		
+
 		embedded_svc.settings.defaultMinimizedText = 'How May I Help You'; //(Defaults to Chat with an Expert)
 		embedded_svc.settings.disabledMinimizedText = 'Please Contact BradyID'; //(Defaults to Agent Offline)
 
@@ -48,17 +48,17 @@
 			if(prechatFormData[4].value === "Finding a Product"){
 				console.log("Routing to Inside Sales...");	
 				//console.log(prechatFormData[4].value);	
-				return "5733A000000TRBw";
+				return "573n000000000hr";
 			}
 			else if(prechatFormData[4].value === "My Existing Order or Account"){
 				console.log("Routing to Inside Sales...");
 				//console.log(prechatFormData[4].value);
-				return "5733A000000TRBw";
+				return "573n000000000hr";
 			}
 			else if(prechatFormData[4].value === "Printer or Software Support"){
 				console.log("Routing to Tech Support...");
 				//console.log(prechatFormData[4].value);
-				return "5733A000000TRBx";
+				return "573n000000000hw";
 			}
 		};
 		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
@@ -73,17 +73,17 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://brady.my.salesforce.com',
-			'https://brady.secure.force.com/docs',
+			'https://brady--Test.my.salesforce.com',
+			'https://test-brady.cs30.force.com/docs',
 			gslbBaseURL,
-			'00D300000009x0b',
+			'00Dn00000009FOw',
 			'Lightning_Inside_Sales',
 			{
-				baseLiveAgentContentURL: 'https://c.la1-c2-phx.salesforceliveagent.com/content',
-				deploymentId: '5723A000000TR6e',
-				buttonId: '5733A000000TRBw',
-				baseLiveAgentURL: 'https://d.la1-c2-phx.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3A000000Cc0FUAS_170ae2517d4',
+				baseLiveAgentContentURL: 'https://c.la1-c1cs-dfw.salesforceliveagent.com/content',
+				deploymentId: '572n000000000OJ',
+				buttonId: '573n000000000hr',
+				baseLiveAgentURL: 'https://d.la1-c1cs-dfw.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'Inside_Sales_Lightning',
 				isOfflineSupportEnabled: false
 			}
 		);
@@ -91,7 +91,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://brady.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://brady--Test.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
