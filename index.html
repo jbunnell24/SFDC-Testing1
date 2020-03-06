@@ -3,15 +3,78 @@
 <body>
 
 <style type='text/css'>
+  .embeddedServiceSidebarHeader .BR-H2, h2 {
+    margin:0px !important;
+  }
+  
+  .uiInput .select {
+  background-image:none !important;
+  }
+  
+  .liveChatStartButtonFormat {
+    margin-bottom:10px !important;
+  }
+  p.liveChatSupportHours {
+    margin:-5px 0px 0px 0px !important;
+  }
+  
+.embeddedServiceHelpButton {
+	z-index: 1001;
+}
+
+.embeddedServiceHelpButton .helpButton {
+	right: 0;
+    margin-right: 6vw;
+    height: auto;
+}
+
+.embeddedServiceHelpButton .helpButton .helpButtonEnabled:focus::before {
+  border-radius: .75rem
+}
+
+.embeddedServiceHelpButton .helpButton .uiButton {
+	background-color: #1779BA;
+	font-family: "Roboto", sans-serif;
+	text-transform: none;
+  font-size: 1.125rem;
+  text-transform: none;
+  font-weight: 500;
+  height: auto;
+  padding: .5rem 1rem;
+  min-width: unset;
+  max-width: none;
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+  border-radius: .75rem;
+}
+.embeddedServiceHelpButton .helpButton .uiButton:focus {
+	outline: 1px solid #0488ED;
+	border-radius: .75rem;
+}
+
+.embeddedServiceIcon {
+  animation-name: iconpulse;
+  animation-delay: 1s;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes iconpulse {
+  0% {transform: scale(1.0)}
+  3% {transform: scale(1.2)}
+  6% {transform: scale(1.0)}
+  100% {transform: scale(1.0)}
+}
+
+@media only screen and (min-width: 48em) {
 	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
+	    border-radius: 0;
 	}
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
+	    border-radius: 0;
 	}
-</style>
+}
 
+</style>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
@@ -35,8 +98,8 @@
 		  "displayToAgent": true
 		}];
 		
-		embedded_svc.settings.defaultMinimizedText = 'How May I Help You'; //(Defaults to Chat with an Expert)
-		embedded_svc.settings.disabledMinimizedText = 'Please Contact BradyID'; //(Defaults to Agent Offline)
+		embedded_svc.settings.defaultMinimizedText = 'Lets Chat'; //(Defaults to Chat with an Expert)
+		embedded_svc.settings.disabledMinimizedText = 'Chat Offline'; //(Defaults to Agent Offline)
 
 		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
 		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
