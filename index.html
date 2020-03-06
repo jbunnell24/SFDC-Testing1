@@ -2,7 +2,6 @@
 <html>
 <body>
 
-<h1>My First Heading</h1>
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #005290;
@@ -18,6 +17,7 @@
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
 		embedded_svc.settings.extraPrechatFormDetails = [{
 		  "label": "First Name",
 		  "transcriptFields":[ "Visitor_First_Name__c" ],
@@ -35,9 +35,9 @@
 		  "transcriptFields":[ "Visitor_Company__c" ],
 		  "displayToAgent": true
 		}];
-
-		embedded_svc.settings.defaultMinimizedText = 'How May I Help You'; //(Defaults to Chat with an Expert)
-		embedded_svc.settings.disabledMinimizedText = 'Please Contact BradyID'; //(Defaults to Agent Offline)
+		
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
 		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
 		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
@@ -46,17 +46,17 @@
 		embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
 		// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
 		// Returns a valid button ID.
-			if(prechatFormData[4].value === "Finding a Product"){
+			if(prechatFormData[4].value === "A product question or recommendation"){
 				console.log("Routing to Inside Sales...");	
 				//console.log(prechatFormData[4].value);	
 				return "5733A000000TRBw";
 			}
-			else if(prechatFormData[4].value === "My Existing Order or Account"){
+			else if(prechatFormData[4].value === "My existing order or account information"){
 				console.log("Routing to Inside Sales...");
 				//console.log(prechatFormData[4].value);
 				return "5733A000000TRBw";
 			}
-			else if(prechatFormData[4].value === "Printer or Software Support"){
+			else if(prechatFormData[4].value === "Printer or software support"){
 				console.log("Routing to Tech Support...");
 				//console.log(prechatFormData[4].value);
 				return "5733A000000TRBx";
