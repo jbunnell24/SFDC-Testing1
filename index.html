@@ -135,17 +135,17 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://brady.my.salesforce.com',
-			'https://brady.secure.force.com/docs',
+			'https://brady--test.my.salesforce.com',
+			'https://test-brady.cs26.force.com/docs',
 			gslbBaseURL,
-			'00D180000009Kqg',
-			'Lightning_Tech_Support',
+			'00D21000000AJ1m',
+			'Lightning_Inside_Sales',
 			{
 				baseLiveAgentContentURL: 'https://c.la4-c1cs-phx.salesforceliveagent.com/content',
 				deploymentId: '5723A000000TR6e',
-				buttonId: '5733A000000TRBx',
+				buttonId: '5733A000000TRBw',
 				baseLiveAgentURL: 'https://d.la4-c1cs-phx.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3A000000Cc0GUAS_170ae25fafb',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3A000000Cc0FUAS_170ae2517d4',
 				isOfflineSupportEnabled: false
 			}
 		);
@@ -153,7 +153,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://brady--partial.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://brady--test.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
